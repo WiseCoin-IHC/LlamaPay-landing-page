@@ -331,3 +331,53 @@ h2 {
     line-height: 30px;
     text-align: justify;
 }
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 20px 53px;
+    gap: 15px;
+
+    background-color: var(--footer_bg);
+}
+
+footer .social-media {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+footer .text-footer {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: white;
+}
+
+footer .small {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+
+    color: white;
+}
+
+footer .legal {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+footer .legal p {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: white;
+}
