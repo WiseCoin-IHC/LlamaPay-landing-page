@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+li {
+    list-style-type: none;
+}
+
 body {
     width: 100%;
     min-height: 100vh;
@@ -23,48 +27,68 @@ body {
     --footer_bg: #474747;
 }
 
+
+/* header */
 header {   
     display: flex; 
     background: linear-gradient(90deg, var(--dark_green), var(--light_green));
     color: white;
-    min-height: 5.625rem;
+    max-height: 5.625rem;
+    min-height: 4.375rem;
     align-items: center;
     justify-content: space-between;
     padding: 0 3rem;
-
 }
-
-.logo{
-    display: flex;
-    width: 12.25rem;
-    height: 3.4375rem;
-}
-
 a {
     text-decoration: none;
     color: white;
+}
+
+.logo {
+    max-width: 9rem;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+}
+
+header .nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+
+    letter-spacing: 0.05em;
+}
+
+header .register {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+
+    letter-spacing: 0.05em;
+}
+
+header li{
+    margin: 0.5em;
 }
 
 .suscribe {
     color: var(--suscribe_color);
 }
 
-nav a:nth-child(-n + 3){
-    padding: .625rem 1.25rem;
-    margin: 0 1.25rem 0 0;
-}
-
-nav a:nth-child(4){
-    padding: .625rem .625rem;
-    margin: 0 1.25rem;
-}
-
-nav a:last-child{
-    padding: .625rem 1.25rem;
+header .register li:last-child a {
+    padding: .625rem 2rem;
     border-radius: .3125rem;
     background-color: var(--cream);
-    color: #474B3E;
+    color: var(--dark_green);
 }
+
+/* ----------- main ---------- */
 
 main{
     display: flex;
@@ -114,13 +138,15 @@ main{
     align-items: center;
     padding: .9375rem 2.5rem;
 
-    width: 20.1875rem;
+    width: 20.2rem;
 
     border: 0;
     cursor: pointer;
     background: var(--cream);
     color: var(--dark_green);
     border-radius: 5px;
+
+    font-size: 1em;
 }
 
 .container-1 p + div {
@@ -380,6 +406,13 @@ footer .legal p {
     color: white;
 }
 
+@media screen and (min-width: 1440px) {
+    header {
+        justify-content: space-evenly;
+    }
+    
+}
+
 @media screen and (min-width: 960px) and (max-width: 1440px) {
     .container-1 .img {
         max-width: 25rem;
@@ -388,10 +421,22 @@ footer .legal p {
 }
 
 @media screen and (min-width: 480px) and (max-width: 960px) {
+
+    /* header */
+    header {
+        padding: 0 1rem;
+        overflow: hidden;
+        pointer-events: none;
+    }
+    
+    header nav {
+        display: none;
+    }
+    /* main */
+
     .container-1 {
         align-items: center;
-        justify-content: center;      
-
+        justify-content: center;
     }
 
     .container-1 h1{
@@ -431,6 +476,40 @@ footer .legal p {
 }
 
 @media screen and (max-width: 480px) {
+    /* header */
+    header {
+        padding: 0 2rem;
+    }
+    
+    header nav {
+        display: none;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    header .register {
+        gap: 0;
+    }
+
+    header .register li:first-child a{
+        padding: .5rem 1.75rem;
+        border-radius: .3125rem;
+        background-color: var(--cream);
+        color: var(--dark_green);        
+    }
+
+    header .register li:last-child{
+        margin: 0;
+    }
+
+    header .register li:last-child a {
+        display: none;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+
+    /* main */
     .container-1 {
         align-items: center;
         justify-content: center;      
@@ -445,13 +524,19 @@ footer .legal p {
         line-height: 3.75rem;
         letter-spacing: 0.05em;
         text-align: center;
-
+        margin: 0 1rem;
         color: white;
     }
 
     .container-1 p {
         max-width: 100%;
+        margin: 0 1rem;
+
         text-align: center;
+    }
+
+    .container-1 .btn-2 p {
+        margin: 0;
     }
 
     .container-1 .img {
@@ -463,20 +548,18 @@ footer .legal p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.875rem;
+        gap: 1rem;
         padding-bottom: .625rem ;
     }
 
     .container-1 p + div {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
+        gap: 1rem;
     }
 
     h2 {
         position: relative;
         font-weight: 600;
-        font-size: 3.5em;
+        font-size: 2.75em;
         line-height: 3.75rem;
         text-align: center;
         letter-spacing: 0.05em;
@@ -484,7 +567,7 @@ footer .legal p {
 
     h2 {
         max-width: 54.875rem;
-        margin: 2rem 0;
+        margin: 2.25rem 2rem;
     }
 
     .container-2 div p {
@@ -527,9 +610,10 @@ footer .legal p {
         width: 22rem;
     }
 
+    /* footer */
     footer .social-media {
         display: flex;
         flex-direction: row;
-        gap: 2.5rem;
+        gap: 2rem;
     }
 }
