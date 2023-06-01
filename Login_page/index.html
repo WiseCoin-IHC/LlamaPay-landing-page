@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Img/Logo.svg" type="image/x-icon">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header id="navbar">
+        <a href="../index.html">
+            <img class="logo" src="../Img/Logo2.svg" alt="LlamaPay_logo">
+        </a>
+    </header>
+    <main class="main">
+        <div class="left-side-main">
+            <div class="author-phrase">
+                <h2>"No ahorres lo que te sobra, gasta lo que te queda después de ahorrar"</p>
+                <h2>- Warren Buffet</p>
+            </div>
+            <div class="author-phrase-img">
+                <img src="../Img/Warren Buffet's Photo.png" alt="Warren Buffet's Photo">
+            </div>
+        </div>
+        <div class="container-form">
+            <div class="title-form">
+                <h2>Iniciar sesión</h2>
+            </div>
+            <form class="login-form">
+                
+                <div class="input-container">
+                    <h3 class="subtitle-input">
+                        Usuario
+                    </h3>
+                    <input type="text" id="usuario-input" placeholder="Nombre de usuario">
+                    <p class="invalid-input-text" id="invalid-username"></p>
+                </div>
+                <div class="input-container">
+                    <h3 class="subtitle-input">
+                        Contraseña
+                    </h3>
+                    <input type="password" id="password-input" placeholder="Contraseña">
+                    <p class="invalid-input-text" id="invalid-password"></p>
+                </div>
+                <div class="input-container">
+                    <button type="button" class="btn-login" id="btn-login" disabled>
+                        Ingresar
+                    </button>
+                </div>
+                <div class="input-container" id="separation-login">
+                    <span>- O -</span>
+                </div>
+                <div class="input-container">
+                    <div class="buttons-sm-container">
+                        <button type="button" href="#" class="btn-sm">
+                            <img src="../Img/logo-google.svg" alt="google_logo">
+                        </button>
+                        <button type="button" href="#" class="btn-sm">
+                            <img src="../Img/logo-facebook.svg" alt="facebook_logo">
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <hr>
+            <div class="footer-form">
+                <p>¿No tienes cuenta?</p><a href="#" id="log-in">Regístrate</a>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="app.js"></script>
+</html>
