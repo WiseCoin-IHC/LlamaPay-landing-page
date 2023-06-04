@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Img/Logo.svg" type="image/x-icon">
+    <title>LlamaPay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="navbar">
+        <a href="../index.html">
+            <img class="logo" src="../Img/Logo2.svg" alt="LlamaPay_logo">
+        </a>
+
+        <nav>
+            <ul class="nav">
+                <li><a href="#">Ahorro</a></li>
+                <li><a href="#">Recordatorios</a></li>
+                <li><a href="#">Consejos</a></li>
+                <li><a href="#">Primera Necesidad</a></li>
+                <li><a  class="suscri" href="#">Suscribirte</a></li>
+                <li><img src="../Img/perfil.png" width="40" height="40" alt="foto de perfil"></li>
+                <li><a href="../Profile_page/index.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-1">
+            <nav class="option">
+                <ul>
+                    <li class="select">
+                        <div class="opc">
+                            <img src="../Img/person.svg" width="30" height="30" alt="person">
+                            <a class="txt" href="#">Editar Perfil</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="opc">
+                            <img src="../Img/settings.svg" width="30" height="30" alt="settings">
+                            <a class="txt" href="#">Configuración</a>
+                        </div>
+                        
+                    </li>
+                    <li class="back">
+                        <div class="opc">
+                            <img src="../Img/exit.svg" width="30" height="30" alt="settings">
+                            <a class="txt" href="#">Salir</a></li>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+        <hr>
+        <div class="container-2">
+            <div class="subContainer-1">
+                <h1 class="title">Editar Perfil</h1>
+                <img class="mainImg" src="../Img/perfil.png" width="400" height="400" alt="">
+                <p class="insert"><a href="#">Seleccionar Foto</a></p>
+            </div>
+
+            <div class="subContainer-2">
+                <form class="Form">
+                    <div class="input-container">
+                        <h3 class="subtitle-input">
+                            Nombre
+                        </h3>
+                        <input type="text" id="nombre-input" placeholder="Nombre" onblur="validarNombre()">
+                        <p class="invalid-input-text" id="invalid-name">El nombre debe ser de, al menos, 3 caractéres</p>
+                    </div>
+    
+                    <div class="input-container">
+                        <h3 class="subtitle-input">
+                            Usuario
+                        </h3>
+                        <input type="text" id="usuario-input" placeholder="Nombre de usuario" onblur="validarUserName()">
+                        <p class="invalid-input-text" id="invalid-username">Nombre de usuario ingresado no válido</p>
+                    </div>
+    
+                    <div class="input-container">
+                        <h3 class="subtitle-input">
+                            Email
+                        </h3>
+                        <input type="email" id="email-input" placeholder="Email" onblur="validarEmail()">
+                        <p class="invalid-input-text" id="invalid-email">Email ingresado no válido</p>
+                    </div>
+    
+                    <div class="input-container">
+                        <h3 class="subtitle-input">
+                            Contraseña
+                        </h3>
+                        <input type="password" id="password-input" placeholder="Contraseña" onblur="validarContrasena()">
+                        <p class="invalid-input-text" id="invalid-password">La contraseña debe tener, al menos, 8 caracteres, 
+                            contener mayúsculas, minúsculas, dígitos (0-9) y caractéres especiales</p>
+                    </div>
+    
+                    <div class="input-container">
+                        <h3 class="subtitle-input">
+                            Género
+                        </h3>
+                        <div class="buttons-gen-container">
+                            <button type="button" class="btn-gen">Masculino</button>
+                            <button type="button" class="btn-gen">Femenino</button>
+                            <button type="button" class="btn-gen">Otro</button>
+                        </div>
+                    </div>
+    
+                    <div class="input-container">
+                        <button type="button" class="btn-save" id="btn-save" disabled>Guardar Cambios</button>
+                    </div>
+                </form>
+
+                <div class="footer-form">
+                    <p><a href="#">Eliminar Cuenta</a></p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
