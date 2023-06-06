@@ -86,20 +86,20 @@ header .nav {
 }
 
 /* Main */
-main{
-    justify-content: center;
+.main-container {
     display: flex;
+    justify-content: center;
 }
 
 div.container-1{
     justify-content: center;
     display: flex;
-    width: 10%;
+    width: 200px;
     margin: 1.6rem 1rem;
 }
 
 div.container-2{
-    width: 30%;
+    width: 600px;
     justify-content: center;
     margin: 1.6rem 3.5rem;
 }
@@ -140,8 +140,11 @@ img{
     margin: 1.5rem 0rem;
 }
 
-.back{
-    margin-top: 30rem;
+.left-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 hr {
@@ -212,7 +215,7 @@ hr {
 
 .buttons{
     display: flex;
-    width: 90%;
+    width: 100%;
 }
 
 .btn {
@@ -262,5 +265,35 @@ hr {
 
 .selectBox :hover{
     background-color: var(--black-hover);
+}
+
+@media screen and (max-width: 880px) {
+    div.container-1 {
+        margin: 1rem 0.5rem;
+    }
+    div.container-2 {
+        margin: 1rem 0.8rem;
+    }
+    div.subContainer-1 {
+        margin: .8rem;
+    }
+    div.subContainer-2 {
+        width: 100%;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .selectBox {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 500px)  {
+    .opc a{
+        font-size: .8rem;
+    }
+    .opc img {
+        width: 18px;
+    }
 }
 
