@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorros</title>
+    <link rel="stylesheet" href="form.styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="navbar">
+        <a href="#">
+            <img class="logo" src="../Img/Logo2.svg" alt="LlamaPay_logo">
+        </a>
+        <nav>
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#presentacion">Ahorros</a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="">
+                                Gastos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Objetivo de Ahorro
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="activated" href="#">Recordatorios</a>
+                </li>
+                <li>
+                    <a href="#">Consejos</a>
+                </li>
+                <li>
+                    <a href="#">Primera Necesidad</a>
+                </li>
+                <li>
+                    <a class="suscribe" href="#">Suscríbete</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="perfil">
+            <li>
+                <a href="../Profile_page/index.html">
+                    <img src="../Img/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main class="main">
+        <div class="main-container">
+            <ul class="list-reminders" id="list-reminders">
+            </ul>
+            <div class="add-reminder-container">
+                <div class="add-reminder" id="add-reminder" onclick="displayForm()">
+                    <div class="horizontal-line"></div>
+                    <div class="vertical-line"></div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </main>
+    <div class="container-form" id="form-div">
+        <div class="title-form">
+            <h2>Agregar recordatorio</h2>
+        </div>
+        <form class="reminder-form">
+            <div class="input-container">
+                <h3 class="subtitle-input">
+                    Nombre recordatorio
+                </h3>
+                <input type="text" id="nombre-input" placeholder="Nombre del recordatorio">
+                <!-- <p class="invalid-input-text" id="invalid-name">El nombre debe ser de, al menos, 3 caractéres</p> -->
+            </div>
+            <div class="input-container">
+                <h3 class="subtitle-input">
+                    Monto
+                </h3>
+                <input type="number" id="amount-input" placeholder="Monto a pagar">
+                <!-- <p class="invalid-input-text" id="invalid-lastname">El nombre debe ser de, al menos, 3 caractéres</p> -->
+            </div>
+            <div class="input-container">
+                <h3 class="subtitle-input">
+                    Fecha límite
+                </h3>
+                <input type="date" id="date-input" placeholder="Fecha limite">
+                <!-- <p class="invalid-input-text" id="invalid-username">Nombre de usuario ingresado no válido</p> -->
+            </div>
+            <div class="input-container">
+                <h3 class="subtitle-input">
+                    Lugar recomendado
+                </h3>
+                <input type="text" id="place-input" placeholder="Lugar recomendado">
+                <!-- <p class="invalid-input-text" id="invalid-username">Nombre de usuario ingresado no válido</p> -->
+            </div>
+            <div class="input-container">
+                <h3 class="subtitle-input">
+                    Detalles
+                </h3>
+                <input type="text" id="details-input" placeholder="Detalles">
+                <!-- <p class="invalid-input-text" id="invalid-username">Nombre de usuario ingresado no válido</p> -->
+            </div>
+            
+            <div class="input-container btns-form">
+                <button type="button" class="btn-form" id="btn-accept" onclick="acceptButton()">Agregar</button>
+                <button type="button" class="btn-form" id="btn-cancel" onclick="contractFrom()">Cancelar</button>
+            </div>
+            
+        </form>
+    </div>
+    <script src="creation.reminder.js"></script>
+    <script src="form.reminder.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    color: #000;
+
+    --dark_green: #506C4D;
+    --light_green: #98BE93;
+    --suscribe_color: #FCD683;
+    --cream: #FBFFFB;
+    --green_bg: #DAFFD6;
+    --footer_bg: #474747;
+    --asparagus: #5A855D;
+    --snow: #F1F1F1;
+    --black-hover: #141f15;
+    --white: #fff;
+    --gray: #8B8B8B;
+    --red-forbidden: #f12323;
+}
+
+header {   
+    display: flex; 
+    background: linear-gradient(90deg, var(--dark_green), var(--light_green));
+    color: white;
+    max-height: 5.625rem;
+    min-height: 4.375rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    max-width: 9rem;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+}
+
+header .nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+
+    letter-spacing: 0.05em;
+}
+
+header .perfil {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+
+    letter-spacing: 0.05em;
+}
+
+header li{
+    margin: 0.5em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background-color: var(--green_bg);
+    box-shadow: .5px 4px 4px rgba(0, 0, 0, .2);
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    color: var(--footer_bg);
+    padding: .75rem 1rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li:hover {
+    background-color: var(--dark_green);
+    color: var(--cream);
+}
+
+.dropdown-content li:hover a {
+    color: var(--cream);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.perfil img{
+    border-radius: 50%;
+}
+
+header .register li:last-child a {
+    padding: .625rem 2rem;
+    border-radius: .3125rem;
+    background-color: var(--cream);
+    color: var(--dark_green);
+
+    transition: .2s;
+}
+
+.suscribe {
+    color: var(--suscribe_color);
+}
+
+.nav a:hover {
+    color: #141f15;
+}
+
+.nav .suscribe:hover {
+    color: #ffae00;
+}
+
+header .register li:first-child a:hover {
+    color: #141f15;
+}
+
+header .register li:last-child a:hover {
+    background-color: #141f15;
+    color: var(--cream);
+}
+
+.main {
+    width: 100%;
+}
+.main-container {
+    max-width: 1200px;
+    margin: 2.4rem auto;
+}
+.reminders-element-list {
+    max-width: 640px;
+    margin: .6rem auto;
+}
+.reminder-container {
+    background-color: var(--asparagus);
+    padding: .4rem;
+    border: none;
+    border-radius: 10px;
+    color: var(--cream);
+}
+.title-and-options {
+    margin: .1rem 0 .6rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-reminder {
+    font-weight: 400;
+    font-size: 1.7em;
+}
+.options-section {
+    display: flex;
+    width: 64px;
+    justify-content: space-around;
+}
+.options-section .circle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--cream);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.options-section .options {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+  
+.options-section .options span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--cream);
+}
+.description {
+    margin: .2rem 0;
+}
+
+.add-reminder-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.8rem 0;
+}
+.add-reminder {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--asparagus);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.horizontal-line,
+.vertical-line {
+    width: 60%;
+    height: 3px;
+    background-color: #fff;
+    position:absolute;
+}
+
+.vertical-line {
+    transform: rotate(90deg);
+}
+  
+  
+  
+  
+  
+
+
