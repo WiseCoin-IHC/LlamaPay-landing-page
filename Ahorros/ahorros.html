@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="navbar">
+        <a href="#">
+            <img class="logo" src="../Img/Logo2.svg" alt="LlamaPay_logo">
+        </a>
+        <nav>
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#presentacion">Ahorros</a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="">
+                                Gastos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Objetivo de Ahorro
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Recordatorios</a>
+                </li>
+                <li>
+                    <a href="#">Consejos</a>
+                </li>
+                <li>
+                    <a href="#">Primera Necesidad</a>
+                </li>
+                <li>
+                    <a class="suscribe" href="#">Suscríbete</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="perfil">
+            <li>
+                <a href="../Profile_page/index.html">
+                    <img src="../Img/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Mis Objetivos</h2>
+            <a class="button-new" href="#" id="btn-new">Nuevo</a>
+        </div>
+
+<!-- 
+        <a href="#" class="agregar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+            </svg>
+        </a> -->
+        
+        <dialog id="modal">
+            <form id="formulario">
+                <div class="close" id="btn-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                    </svg>                
+                </div>
+                <div>
+                    <h3>
+                        Nombre del Objetivo
+                    </h3>
+                    <input class=".input" type="text" name="nombreFormulario" required>
+
+                    <h3>
+                        Monto a Ahorrar
+                    </h3>
+                    <input class=".input" type="number" min="1"  name="montoFormulario" required>
+
+                    <h3>
+                        Fecha Límite
+                    </h3>
+                    <input class=".input" type="date" name="fechaFormulario" required>
+
+
+                    <h3>
+                        Descripción
+                    </h3>
+                    <textarea name="descripcionFormulario" id="descripcion" maxlength="100"></textarea>
+                    <input class="button" type="submit" value="Crear Objetivo">
+                </div>
+            </form>
+        </dialog>
+        <div class="wrap" id="Objetivos">
+            <!-- <div class="card-Objetivos">
+                <h3>Caminar en la calle</h3>
+                <p>jugando a correr</p>
+            </div>
+            <div class="card-Objetivos">
+                <h3>Caminar en la calle</h3>
+                <p>jugando a correr</p>
+            </div>
+            <div class="card-Objetivos">
+                <h3>Caminar en la calle</h3>
+                <p>jugando a correr</p>
+            </div> -->
+        </div>
+    </main>
+    <script type="module"  src="./agregar.js"></script>
+</body>
+</html>
