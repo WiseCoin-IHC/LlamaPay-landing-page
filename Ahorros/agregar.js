@@ -24,6 +24,7 @@ formulario.addEventListener("submit", event=>{
     const agregar = new Formulario(target.nombreFormulario.value, target.montoFormulario.value, target.fechaFormulario.value, target.descripcionFormulario.value);
     mostrar(agregar);
     formulario.reset(); // resetea el formulario
+    modal.close();
 });
 
 let IdContador = 0;
