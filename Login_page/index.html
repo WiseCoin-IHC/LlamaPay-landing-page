@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../Img/Logo.svg" type="image/x-icon">
-    <title>Registro</title>
+    <title>Inicio sesión</title>
     <link rel="stylesheet" href="styles.css">
     
 </head>
@@ -35,21 +35,20 @@
                     <h3 class="subtitle-input">
                         Usuario
                     </h3>
-                    <input type="text" id="usuario-input" placeholder="Nombre de usuario">
-                    <p class="invalid-input-text" id="invalid-username"></p>
+                    <input type="text" id="usuario-input" placeholder="Nombre de usuario" onblur="validarUserName()">
+                    <p class="invalid-input-text" id="invalid-username">Nombre de usuario ingresado no válido</p>
                 </div>
                 <div class="input-container">
                     <h3 class="subtitle-input">
                         Contraseña
                     </h3>
-                    <input type="password" id="password-input" placeholder="Contraseña">
-                    <p class="invalid-input-text" id="invalid-password"></p>
+                    <input type="password" id="password-input" placeholder="Contraseña" onblur="validarContrasena()">
+                    <p class="invalid-input-text" id="invalid-password">La contraseña debe tener, al menos, 8 caracteres, 
+                        contener mayúsculas, minúsculas, dígitos (0-9) y caractéres especiales</p>
                 </div>
                 <div class="input-container">
                     <button type="button" class="btn-login" id="btn-login">
-                        <a class="log-in-btn" href="../Ahorros/objetivos.html">
-                            Ingresar
-                        </a>
+                        Ingresar
                     </button>
                 </div>
                 <div class="input-container" id="separation-login">
