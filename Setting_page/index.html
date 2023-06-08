@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Img/Logo.svg" type="image/x-icon">
+    <title>LlamaPay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <a href="#">
+            <img class="logo" src="../Img/Logo2.svg" alt="LlamaPay_logo">
+        </a>
+        <nav>
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#presentacion">Ahorros</a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="#">
+                                Gastos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../Ahorros/objetivos.html">
+                                Objetivo de Ahorro
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../Recordatorios/recordatorios.html">Recordatorios</a>
+                </li>
+                <li>
+                    <a href="#">Consejos</a>
+                </li>
+                <li>
+                    <a href="#">Primera Necesidad</a>
+                </li>
+                <li>
+                    <a class="suscribe" href="#">Suscríbete</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="perfil">
+            <li>
+                <a href="../Profile_page/index.html">
+                    <img src="../Img/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="main-container">
+
+            <div class="container-1">
+                <nav class="option">
+                    <ul class="left-options">
+                        <div class="first-options">
+                            <li>
+                                <div class="opc">
+                                    <img src="../Img/person.svg" width="30" height="30" alt="person">
+                                    <a class="txt" href="../Profile_page/index.html">Editar Perfil</a>
+                                </div>
+                            </li>
+                            <li class="select">
+                                <div class="opc">
+                                    <img src="../Img/settings.svg" width="30" height="30" alt="settings">
+                                    <a class="txt" href="../Setting_page/index.html">Configuración</a>
+                                </div>
+        
+                            </li>
+                        </div>
+                        <div class="last-option">
+                            <li class="back">
+                                <div class="opc">
+                                    <img src="../Img/exit.svg" width="30" height="30" alt="settings" id="profile-img">
+                                    <a class="txt" href="../index.html">Salir</a>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <hr>
+            <div class="container-2">
+                <h1 class="title">Configuración</h1>
+                <div class="subContainer-1">
+                    <h2 class="subTitle">Interfaz</h2>
+                    <div class="choose">
+                        <h3 class="thema">Tema</h3>
+                        <nav>
+                            <ul>
+                                <div class="subChoose">
+                                    <div class="circle-1"></div>
+                                    <li class="txt1"><a href="#">Claro</a></li>
+                                </div>
+    
+                                <div class="subChoose">
+                                    <div class="circle-2"></div>
+                                    <li class="txt1"><a href="#">Oscuro</a></li>
+                                </div>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="choose">
+                        <h3 class="size">Tamaño</h3>
+                        <div class="buttons">
+                            <button type="button" class="btn" id="min">Aa</button>
+                            <button type="button" class="btn">Restaurar</button>
+                            <button type="button" class="btn" id="max">Aa</button>
+                        </div>
+                    </div>
+                    <div class="choose">
+                        <h3 class="language">Idioma</h3>
+                        <form action="">
+                            <div class="selectBox">
+                                <div class="selected" id="select">
+                                    <div class="contenido-select">
+                                        <p class="title-select">Español</p>
+                                    </div>
+                                    <i class="fa-solid fa-angle-down" style="color: #ffffff;"></i>
+                                </div>
+                            </div>  
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

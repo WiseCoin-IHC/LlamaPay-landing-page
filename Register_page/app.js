@@ -120,4 +120,20 @@ function isSuccessfulSignUp() {
     return checked
 }
 
+const btnRegister = document.getElementById('btn-register');
+
+btnRegister.addEventListener('click', function() {
+
+    if (isSuccessfulSignUp()) {
+        window.location.href='../Ahorros/objetivos.html';
+    }
+    else {
+        validarNombre();
+        validarApellido();
+        validarUserName();
+        validarEmail();
+        validarContrasena();
+    }
+})
+
 
