@@ -1,89 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+@import url('../CSS_Styles/Navbar.styles.css');
+@import url('../CSS_Styles/Body.colors.css');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style-type: none;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 100%;
-    font-weight: 400;
-    color: #000;
-
-    --dark_green: #506C4D;
-    --light_green: #98BE93;
-    --suscribe_color: #FCD683;
-    --cream: #FBFFFB;
-    --green_bg: #DAFFD6;
-    --footer_bg: #474747;
-    --snow: #F1F1F1;
-    --white: #FFF;
-    --asparagus: #7BAE7F;
-    --black-hover: #141f15;
-}
-
-/* header */
-header {   
-    display: flex; 
-    background: linear-gradient(90deg, var(--dark_green), var(--light_green));
-    color: white;
-    max-height: 5.625rem;
-    min-height: 4.375rem;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 3rem;
-}
-
-a{
-    text-decoration: none;
-}
-
-nav ul.nav li a {
-    color: white;
-}
-
-.logo {
-    max-width: 9rem;
-}
-
-header nav {
-    display: flex;
-    flex-direction: row;
-}
-.nav li{
-    margin: 0rem .9rem;
-}
-
-header .nav {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1.5rem;
-    letter-spacing: 0.05em;
-    margin: 0rem auto;
-}
-
-.nav a:hover {
-    color: #141f15;
-}
-
-.nav a.suscri:hover{
-    color: #FCD683;
-}
 
 /* Main */
 
@@ -145,7 +62,7 @@ img{
     width: 240px;
     object-fit: contain;
 }
-ul {
+.left-options {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
