@@ -125,7 +125,7 @@ const btnRegister = document.getElementById('btn-register');
 btnRegister.addEventListener('click', function() {
 
     if (isSuccessfulSignUp()) {
-        window.location.href='../Ahorros/objetivos.html';
+        window.location.href='./savings/objectives.html';
     }
     else {
         validarNombre();

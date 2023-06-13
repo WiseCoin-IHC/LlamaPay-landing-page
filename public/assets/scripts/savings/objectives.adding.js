@@ -1,4 +1,4 @@
-import Formulario from "./formulario.js";
+import Formulario from "./objectives.form.js";
 
 const btnAbrirPopUP = document.querySelector("#btn-new");
 const btnCerrarPopUP = document.querySelector("#btn-close");
@@ -34,7 +34,7 @@ function mostrar(obj) {
 
     Objetivos.innerHTML += `
     <div class="card-Objetivos" id="${IdContador}">
-        <img src="../Img/x-lg.svg" alt="Eliminar">
+        <img src="../assets/images/x-lg.svg" alt="Eliminar">
         <h3>${obj.getNombre()}</h3>
         <p>El Monto a Ahorrar es: S/.${obj.getMonto()}</p>
         <p>La Fecha Límite es: ${obj.getFecha()}</p>
