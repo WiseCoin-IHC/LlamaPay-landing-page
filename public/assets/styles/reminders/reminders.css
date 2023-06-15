@@ -1,5 +1,5 @@
-@import url('../CSS_Styles/Navbar.styles.css');
-@import url('../CSS_Styles/Body.colors.css');
+@import url('../shared/navbar.styles.css');
+@import url('../shared/Body.colors.css');
 
 /* Main */
 .main {

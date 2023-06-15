@@ -45,7 +45,7 @@ const btnLogin = document.getElementById('btn-login');
 btnLogin.addEventListener('click', function() {
 
     if (isSuccessfulSignIn()) {
-        window.location.href='../Ahorros/objetivos.html';
+        window.location.href='./savings/objectives.html';
     }
     else {
         validarUserName();
