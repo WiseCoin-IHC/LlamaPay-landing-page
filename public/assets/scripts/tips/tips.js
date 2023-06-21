@@ -42,4 +42,5 @@ function CreateUserResponse(text){
     UserResponse.appendChild(UserResponseText);
     chatContainer.appendChild(UserResponse);
     chatContainer.appendChild(CreateLlamaBotResponse(text));
+    window.scrollTo(0, document.body.scrollHeight);
 }
