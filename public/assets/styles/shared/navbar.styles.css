@@ -26,8 +26,8 @@ header nav {
 header .nav {
     display: flex;
     justify-content: flex-end;
+    gap: 12px;
     align-items: center;
-    gap: 1.5rem;
     letter-spacing: 0.05em;
 }
 
@@ -35,16 +35,20 @@ header .perfil {
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
-
     letter-spacing: 0.05em;
 }
 
-.navul-element {
-    width: 150px;
+.nav .navul-element {
+    width: 170px;
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: .3s;
+    border-radius: 10px;
+}
+.nav .navul-element:first-child {
+    border-radius: 10px 10px 0 0;
 }
 .navul-element a {
     width: 100%;
@@ -52,7 +56,7 @@ header .perfil {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .activated {
@@ -61,18 +65,23 @@ header .perfil {
 }
 #ul-element-profile {display: none;}
 
-
 .dropdown-content {
     display: none;
     position: absolute;
     top: 50px;
+    width: 170px;
     z-index: 999;
     background-color: var(--green_bg);
     box-shadow: .5px 4px 4px rgba(0, 0, 0, .2);
+    
 }
 
 .dropdown-content li {
     margin: 0;
+    transition: .3s;
+}
+.dropdown-content li:nth-child(2) a {
+    border-radius: 0;
 }
 
 .dropdown-content a {
@@ -84,11 +93,13 @@ header .perfil {
 
 .dropdown-content li:hover {
     background-color: var(--dark_green);
-    color: var(--cream);
 }
 
 .dropdown-content li:hover a {
     color: var(--cream);
+}
+.dropdown-content li:hover .activated:hover {
+    color: var(--footer_bg);
 }
 
 .dropdown:hover .dropdown-content {
@@ -194,7 +205,7 @@ header .register li:last-child a:hover {
 }
 
 
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1180px) {
     #navigation-bar {
         display: none;
     }
