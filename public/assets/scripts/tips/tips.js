@@ -29,6 +29,30 @@ function CreateLlamaBotResponse(responseText){
     return llamaBotSpeech;
 }
 
+function MoveOptionContainerToLast() {
+
+    let optionContainer = document.getElementById('option-container');
+
+    optionContainer.parentNode.appendChild(optionContainer);
+}
+
+function RemoveQuestionFromOptionContainer(text){
+
+    let optionContainer = document.getElementById('option-container');
+    let tipList = document.getElementById('tip-list')
+    
+    Array.from(tipList.children).forEach(li =>{
+        if (li.innerText === text) {
+            tipList.removeChild(li);
+        }
+    })
+
+    if (tipList.childElementCount === 0){
+        optionContainer.style.display = "none";
+    }
+
+}
+
 function CreateUserResponse(text){
 
     const textResponse = text;
@@ -42,5 +66,9 @@ function CreateUserResponse(text){
     UserResponse.appendChild(UserResponseText);
     chatContainer.appendChild(UserResponse);
     chatContainer.appendChild(CreateLlamaBotResponse(text));
+
+    RemoveQuestionFromOptionContainer(text);
+    MoveOptionContainerToLast();
+
     window.scrollTo(0, document.body.scrollHeight);
 }

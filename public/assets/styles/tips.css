@@ -9,12 +9,14 @@
     gap: 3em;
     width: 30%;
     margin: auto;
+    margin-top: 1em;
 }
 
 .llamaBot-speech-container{
     height: 11.5em;
     display: flex;
     margin-right: auto;
+    margin-bottom: 1.5em;
 }
 
 .llamaBot-speech-container img{
@@ -63,13 +65,14 @@
     transform: skewX(-20deg);
 }
 
-.option-container{
+#option-container{
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    margin-bottom: 1em;
 }
 
-.tip-list{
+#tip-list{
     display: flex;
     flex-direction: column;
     gap: 1em;
