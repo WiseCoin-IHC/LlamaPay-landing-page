@@ -18,9 +18,9 @@
         <a href="#">
             <img class="logo" src="./assets/images/Logo2.svg" alt="LlamaPay_logo">
         </a>
-        <nav>
+        <nav id="navigation-bar">
             <ul class="nav">
-                <li class="dropdown">
+                <li class="navul-element dropdown">
                     <a href="#presentacion">Ahorros</a>
                     <ul class="dropdown-content">
                         <li>
@@ -35,27 +35,58 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="navul-element">
                     <a href="./reminders.html">Recordatorios</a>
                 </li>
-                <li>
+                <li class="navul-element">
                     <a href="#">Consejos</a>
                 </li>
-                <li>
-                    <a href="#">Primera Necesidad</a>
+                <li class="navul-element">
+                    <a class="activated" href="./products.html">Primera Necesidad</a>
                 </li>
-                <li>
+                <li class="navul-element">
                     <a class="suscribe" href="#">Suscríbete</a>
                 </li>
             </ul>
+            <ul class="perfil">
+                <li>
+                    <a href="./profile.html">
+                        <img src="./assets/images/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
+                    </a>
+                </li>
+            </ul>
         </nav>
-        <ul class="perfil">
-            <li>
-                <a href="./profile.html">
-                    <img src="./assets/images/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
-                </a>
+        <input type="checkbox" id="check-dropdown-menu">
+        <label class="options-responsive" id="menu" for="check-dropdown-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        
+        <ul class="dropdown-menu" id="dropdown-menu">
+            <li class="navul-element">
+                <a href="#">Gastos</a>
             </li>
-        </ul>
+            <li class="navul-element">
+                <a href="./savings/objectives.html">Objetivo de Ahorro</a>
+            </li>
+            <li class="navul-element">
+                <a href="./reminders.html">Recordatorios</a>
+            </li>
+            <li class="navul-element">
+                <a href="#">Consejos</a>
+            </li>
+            <li class="navul-element">
+                <a class="activated" href="./products.html">Primera Necesidad</a>
+            </li>
+            <li class="navul-element">
+                <a class="suscribe" href="#">Suscríbete</a>
+            </li>
+            <li class="navul-element">
+                <a href="./profile.html">Perfil</a>
+            </li>
+        </ul>         
     </header>
 
     <main>
@@ -178,6 +209,7 @@
             </div>    
         </div>
     </main>
+    <script src="./assets/scripts/navbar.js"></script>
 </body>
 
 </html>
