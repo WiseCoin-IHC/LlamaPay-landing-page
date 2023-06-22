@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/Logo.svg" type="image/x-icon">
+    <title>Gastos</title>
+    <link rel="stylesheet" href="../assets/styles/savings/gastos.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <a href="#">
+            <img class="logo" src="../assets/images/Logo2.svg" alt="LlamaPay_logo">
+        </a>
+        <nav>
+            <ul class="nav">
+                <li class="dropdown">
+                    <a href="#presentacion">Ahorros</a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a class="activated" href="#">
+                                Gastos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="objectives.html">
+                                Objetivo de Ahorro
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../reminders.html">Recordatorios</a>
+                </li>
+                <li>
+                    <a href="#">Consejos</a>
+                </li>
+                <li>
+                    <a href="#">Primera Necesidad</a>
+                </li>
+                <li>
+                    <a class="suscribe" href="#">Suscríbete</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="perfil">
+            <li>
+                <a href="../profile.html">
+                    <img src="../assets/images/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
+                </a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Mis Gastos</h2>
+            <a class="button-new" href="#" id="btn-new">Nuevo</a>
+
+        </div>
+        <div class="container-2">
+            <div class="root">
+                <div class="calendar" id="calendar">
+                    <script type="text/javascript"
+                        src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+                    <script type="text/javascript"
+                        src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
+                    <script type="text/javascript" src="../assets/scripts/savings/gastos.calendar.js"></script>
+                    <script type="text/javascript">
+                        let calendar = new Calendar('calendar');
+                        calendar.getElement().addEventListener('change', e => {
+                            console.log(calendar.value().format('LLL'));
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="board">
+                <div class="titulo_grafica">
+                    <h3 class="t_grafica">Grafica</h3>
+                </div>
+                <div class="sub_board">
+                    <div class="sep_board"></div>
+                    <div class="cont_board">
+                        <div class="graf_board">
+                            <div class="barra">
+                                <div class="sub_barra b1">
+                                    <div class="tag_g">350</div>
+                                    <div class="tag_leyenda">Edu.</div>
+                                </div>
+                            </div>
+                            <div class="barra">
+                                <div class="sub_barra b2">
+                                    <div class="tag_g">450</div>
+                                    <div class="tag_leyenda">Salud</div>
+                                </div>
+                            </div>
+                            <div class="barra">
+                                <div class="sub_barra b3">
+                                    <div class="tag_g">150</div>
+                                    <div class="tag_leyenda">Hogar</div>
+                                </div>
+                            </div>
+                            <div class="barra">
+                                <div class="sub_barra b4">
+                                    <div class="tag_g">750</div>
+                                    <div class="tag_leyenda">Vehi</div>
+                                </div>
+                            </div>
+                            <div class="barra">
+                                <div class="sub_barra b5">
+                                    <div class="tag_g">250</div>
+                                    <div class="tag_leyenda">P.Nec</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tag_board">
+                            <div class="sub_tag_board">
+                                <div>1000</div>
+                                <div>900</div>
+                                <div>800</div>
+                                <div>700</div>
+                                <div>600</div>
+                                <div>500</div>
+                                <div>400</div>
+                                <div>300</div>
+                                <div>200</div>
+                                <div>100</div>
+                                <div>0</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sep_board"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
