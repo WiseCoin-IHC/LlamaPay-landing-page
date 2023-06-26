@@ -1,4 +1,4 @@
-const addReminderButton = document.getElementById('add-reminder')
+const addReminderButton = document.getElementById('btn-new')
 const remindersList = document.getElementById('list-reminders')
 
 var title='';
@@ -13,6 +13,7 @@ function addData(dTitle, dAmount, dDate, dPlace, dDetails) {
     date=dDate;
     place=dPlace;
     details=dDetails;
+
 }
 
 function createTitleAndOptions() {
@@ -59,6 +60,7 @@ function createParagraphDescriptions() {
     paragraphDate.id='limit-date';
     paragraphDate.innerText='Fecha limite: '+date;
 
+    
     let paragraphPlace = document.createElement('p');
     paragraphPlace.className='description';
     paragraphPlace.id='recommended-place';
@@ -71,8 +73,8 @@ function createParagraphDescriptions() {
 
     paragraphsArray.push(paragraphAmount)
     paragraphsArray.push(paragraphDate)
-    paragraphsArray.push(paragraphPlace)
-    paragraphsArray.push(paragraphDetails)
+    if (place!=='') paragraphsArray.push(paragraphPlace)
+    if (details!=='') paragraphsArray.push(paragraphDetails)
 
     return paragraphsArray;
 }

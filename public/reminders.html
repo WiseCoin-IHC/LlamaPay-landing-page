@@ -88,14 +88,18 @@
 
     <main class="main">
         <div class="main-container">
+            <div class="container">
+                <h2>Mis Recordatorios</h2>
+                <a class="button-new" href="#" id="btn-new" onclick="displayForm()">Nuevo</a>
+            </div>
             <ul class="list-reminders" id="list-reminders">
             </ul>
-            <div class="add-reminder-container">
+            <!-- <div class="add-reminder-container">
                 <div class="add-reminder" id="add-reminder" onclick="displayForm()">
                     <div class="horizontal-line"></div>
                     <div class="vertical-line"></div>
                 </div>
-            </div>
+            </div> -->
         </div>
         
         
@@ -107,21 +111,21 @@
         <form class="reminder-form">
             <div class="input-container">
                 <h3 class="subtitle-input">
-                    Nombre recordatorio
+                    Nombre recordatorio*
                 </h3>
                 <input type="text" id="nombre-input" placeholder="Nombre del recordatorio">
                 <!-- <p class="invalid-input-text" id="invalid-name">El nombre debe ser de, al menos, 3 caractéres</p> -->
             </div>
             <div class="input-container">
                 <h3 class="subtitle-input">
-                    Monto
+                    Monto*
                 </h3>
                 <input type="number" id="amount-input" placeholder="Monto a pagar">
                 <!-- <p class="invalid-input-text" id="invalid-lastname">El nombre debe ser de, al menos, 3 caractéres</p> -->
             </div>
             <div class="input-container">
                 <h3 class="subtitle-input">
-                    Fecha límite
+                    Fecha límite*
                 </h3>
                 <input type="date" id="date-input" placeholder="Fecha limite">
                 <!-- <p class="invalid-input-text" id="invalid-username">Nombre de usuario ingresado no válido</p> -->
@@ -139,6 +143,10 @@
                 </h3>
                 <input type="text" id="details-input" placeholder="Detalles">
                 <!-- <p class="invalid-input-text" id="invalid-username">Nombre de usuario ingresado no válido</p> -->
+            </div>
+            <div class="input-container invalid-data">
+                <p id="invalid-data">Por favor, llenar todos los campos obligatorios. (*)</p>
+                <p id="invalid-date">Por favor, la fecha debe ser mayor al día de hoy.</p>
             </div>
             
             <div class="input-container btns-form">
