@@ -255,7 +255,11 @@ h3 {
 .b5 {
     height: 25%;
 }
-
+@media screen and (max-width: 660px) {
+    .container {
+        flex-direction: column;
+    }
+}
 
 
 /* 
