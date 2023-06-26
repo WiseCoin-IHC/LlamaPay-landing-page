@@ -120,6 +120,11 @@
         margin: .6rem .6rem;
     }
 }
+@media screen and (max-width: 660px) {
+    .container {
+        flex-direction: column;
+    }
+}
   
   
   
