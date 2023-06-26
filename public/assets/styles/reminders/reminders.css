@@ -5,9 +5,28 @@
 .main {
     width: 100%;
 }
-.main-container {
-    max-width: 1200px;
-    margin: 2.4rem auto;
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 10rem;
+}
+.container h2 { 
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 2.9375rem;
+}
+
+.button-new {
+    color:  black;
+    border-radius: 1rem;
+    border: 2px dashed black;
+    padding: 10px 40px;
+
+    font-size: 1.25em;
+    line-height: 1.5rem;
 }
 .reminders-element-list {
     max-width: 640px;
@@ -88,6 +107,18 @@
 
 .vertical-line {
     transform: rotate(90deg);
+}
+
+@media screen and (max-width: 672px) {
+    .list-reminders {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .reminders-element-list {
+        margin: .6rem .6rem;
+    }
 }
   
   

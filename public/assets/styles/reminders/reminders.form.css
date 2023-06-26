@@ -1,5 +1,5 @@
 .container-form {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     width: 100%;
@@ -68,6 +68,10 @@
 #btn-cancel:hover {
     background-color: var(--red-forbidden);
     color: var(--snow);
+}
+.invalid-data p{
+    display: none;
+    color: red;
 }
 
 @media screen and (max-width: 550px) {
