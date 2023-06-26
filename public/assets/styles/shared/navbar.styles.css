@@ -80,7 +80,7 @@ header .perfil {
     margin: 0;
     transition: .3s;
 }
-.dropdown-content li:nth-child(2) a {
+.dropdown-content  a {
     border-radius: 0;
 }
 
