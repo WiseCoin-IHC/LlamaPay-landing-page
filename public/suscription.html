@@ -4,53 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Añadir metodo de pago</title>
-    <link rel="stylesheet" href="form.styles.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/images/Logo.svg" type="image/x-icon">
+    <title>Suscripción</title>
+    <link rel="stylesheet" href="./assets/styles/suscription.css">
 </head>
 <body>
     <header id="navbar">
         <a href="#">
-            <img class="logo" src="../Img/Logo2.svg" alt="LlamaPay_logo">
+            <img class="logo" src="./assets/images/Logo2.svg" alt="LlamaPay_logo">
         </a>
-        <nav>
+        <nav id="navigation-bar">
             <ul class="nav">
-                <li class="dropdown">
+                <li class="navul-element dropdown">
                     <a href="#presentacion">Ahorros</a>
                     <ul class="dropdown-content">
                         <li>
-                            <a href="">
+                            <a href="./savings/gastos.html">
                                 Gastos
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="./savings/objectives.html">
                                 Objetivo de Ahorro
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a class="activated" href="#">Recordatorios</a>
+                <li class="navul-element">
+                    <a href="./reminders.html">Recordatorios</a>
                 </li>
-                <li>
-                    <a href="#">Consejos</a>
+                <li class="navul-element">
+                    <a href="./tips.html">Consejos</a>
                 </li>
-                <li>
-                    <a href="#">Primera Necesidad</a>
+                <li class="navul-element">
+                    <a href="./products.html">Primera Necesidad</a>
                 </li>
+                <li class="navul-element">
+                    <a class="activated suscribe" href="#">Suscríbete</a>
+                </li>
+            </ul>
+            <ul class="perfil">
                 <li>
-                    <a class="suscribe" href="#">Suscríbete</a>
+                    <a href="./profile.html">
+                        <img src="./assets/images/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
+                    </a>
                 </li>
             </ul>
         </nav>
-        <ul class="perfil">
-            <li>
-                <a href="../Profile_page/index.html">
-                    <img src="../Img/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
-                </a>
+        <input type="checkbox" id="check-dropdown-menu">
+        <label class="options-responsive" id="menu" for="check-dropdown-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        
+        <ul class="dropdown-menu" id="dropdown-menu">
+            <li class="navul-element">
+                <a href="./savings/gastos.html">Gastos</a>
             </li>
-        </ul>
+            <li class="navul-element">
+                <a href="./savings/objectives.html">Objetivo de Ahorro</a>
+            </li>
+            <li class="navul-element">
+                <a href="#">Recordatorios</a>
+            </li>
+            <li class="navul-element">
+                <a href="./tips.html">Consejos</a>
+            </li>
+            <li class="navul-element">
+                <a href="./products.html">Primera Necesidad</a>
+            </li>
+            <li class="navul-element">
+                <a class="activated suscribe" href="#">Suscríbete</a>
+            </li>
+            <li class="navul-element">
+                <a class="perfil" href="./profile.html">Perfil</a>
+            </li>
+        </ul>         
     </header>
 
     <main class="main">
