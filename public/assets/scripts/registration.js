@@ -20,6 +20,15 @@ botones.forEach(boton => {
 });
 
 // Validación de datos
+// Validación de boton
+function validarBoton() {
+    if(validGen){
+        document.getElementById('invalid-button').style.display= 'none'
+    }
+    else{
+        document.getElementById('invalid-button').style.display= 'block'
+    }
+}
 // Validación del nombre
 function checkName() {
     const inputTexto = document.getElementById("nombre-input");
@@ -121,11 +130,15 @@ function isSuccessfulSignUp() {
 }
 
 const btnRegister = document.getElementById('btn-register');
+var miElemento = document.getElementById('confirmacion');
 
 btnRegister.addEventListener('click', function() {
 
     if (isSuccessfulSignUp()) {
-        window.location.href='./savings/objectives.html';
+        miElemento.style.display = "block";
+        setTimeout(function() {
+            window.location.href='./savings/objectives.html'; 
+          }, 1500); 
     }
     else {
         validarNombre();
@@ -133,6 +146,7 @@ btnRegister.addEventListener('click', function() {
         validarUserName();
         validarEmail();
         validarContrasena();
+        setInterval(validarBoton, 50);
     }
 })
 
