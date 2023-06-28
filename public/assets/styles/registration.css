@@ -169,7 +169,16 @@ hr {
 #log-in:hover {
     color: var(--black-hover)
 }
-
+.confirmacion{
+    text-align: center;
+    background-color:#7BAE7F;
+    padding: 0.5rem;
+    width: 200px;
+    height: 120px;
+    position: absolute;
+    top: 40%;
+    display: none;
+}
 @media screen and (max-width: 550px) {
     .container-form {
         margin: 0;
