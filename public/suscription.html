@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="./assets/images/Logo.svg" type="image/x-icon">
     <title>Suscripción</title>
     <link rel="stylesheet" href="./assets/styles/suscription.css">
+
+
 </head>
 <body>
     <header id="navbar">
@@ -85,65 +87,77 @@
     </header>
 
     <main class="main">
-        <div class="main-container">
+        <div class="main-container container">
             <ul class="list-reminders" id="list-reminders">
             </ul>
-            <div class="input-container btns-form">
-                <button type="button" class="btn-form" id="btn-accept" onclick="displayForm()">Añadir metodo de pago</button>
+            <div class="pago-info">
+                <div class="background-image"><div class="blur"></div></div>
+                <form id="paymentForm" onsubmit="handleFormAndPopup(event)">
+        
+                    <div class="row">
+                        <div class="col-form">
+        
+                            <h2 class="title">Datos de la tarjeta</h2>
+        
+                            <div class="inputBox">
+                                <span>Tarjetas aceptadas:</span>
+                                <img src="./assets/images/tarjetas-aceptadas.png" alt="">
+                            </div>
+                            <div class="inputBox">
+                                <span>Nombre del propietario:</span>
+                                <input type="text" placeholder="Ej: David Mamani" id="nombre-input" onblur="validarNombre()">
+                                <p id="name-error" class="error-message"></p>
+                                <p class="invalid-input-text" id="invalid-name">El nombre debe ser de, al menos, 3 caractéres</p>
+                            </div>
+                            <div class="inputBox">
+                                <span>Número del teléfono:</span>
+                                <input type="text" placeholder="999-999-999" id="telefono-input" onblur="validarTelefono()" oninput="formatPhoneNumber(this)">
+                                <p id="name-error" class="error-message"></p>
+                                <p class="invalid-input-text" id="invalid-phone">El número de teléfono debe contener 9 dígitos</p>
+                            </div>
+                            <div class="inputBox">
+                                <span>Número de tarjeta:</span>
+                                <input type="text" placeholder="1111-2222-3333-4444" maxlength="19" id="tarjeta-input" onblur="validarTarjeta()" oninput="formatCardNumber(this)">
+                                <p id="cardNumber-error" class="error-message"></p>
+                                <p class="invalid-input-text" id="invalid-card">El número de tarjeta ingresado no es válido</p>
+                            </div>
+        
+                            <div class="flex">
+                                <div class="inputBox">
+                                    <span>Fecha:</span>
+                                    <input type="text" placeholder="MM/AA" maxlength="5" id="fecha-input" onblur="validarFecha()"">
+                                    <p id="expirationDateError" class="error-message"></p>
+                                    <p class="invalid-input-text" id="invalid-date">La fecha ingresada no es válida</p>
+                                </div>
+                                <div class="inputBox">
+                                    <span>CVV:</span>
+                                    <input type="text" placeholder="123" maxlength="3" id="cvv-input" onblur="validarCVV()" oninput="formatFecha(this)">
+                                    <p id="cvv-error" class="error-message"></p>
+                                    <p class="invalid-input-text" id="invalid-cvv">El CVV ingresado no es válido</p>
+                                </div>
+                            </div>
+                            
+                        </div>
+        
+                    </div>
+        
+                </form>
+        
+                <input type="submit" value="Realizar pago" class="submit-btn" onclick="validarCVV()">
+                <input type="submit" value="Cancelar" class="cancel-btn">
+                    
+                <div class="popup-pago" id="popup-pago">
+                    <img src="./assests/images/img-pago/popup-success.png" alt="">
+                    <h2>Gracias</h2>
+                    <p>Tu pago fue procesado correctamente<br>Gracias por tu compra.</p>
+                    <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
+                </div>
             </div>
         </div>
     </main>
 
-    <div class="container">
-        <div class="card-form" id="card-form" style="display: none;">
-            <label for="card-number">Número de Tarjeta:</label>
-            <br>
-            <input type="text" id="card-number">
-            <br><br>
-            <label for="expiration-date">Fecha de Vencimiento:</label>
-            <br>
-            <input type="text" id="expiration-date">
-            <br><br>
-            <label for="security-code">Código de Seguridad:</label>
-            <br>
-            <input type="password" id="security-code">
-            <br><br>
-            <button type="button" class="btn-form" id="btn-accept" onclick="addCreditCard()">Guardar Tarjeta</button>
-        </div>
-        <div id="card-list">
-            <!-- Lista de tarjetas de crédito agregadas -->
-        </div>
-    </div>
-
-    <script>
-        function displayForm() {
-            var cardForm = document.getElementById("card-form");
-            cardForm.style.display = "block";
-        }
-
-        function addCreditCard() {
-            var cardNumber = document.getElementById("card-number").value;
-            var expirationDate = document.getElementById("expiration-date").value;
-            var securityCode = document.getElementById("security-code").value;
-
-            // Aquí puedes realizar cualquier acción adicional, como enviar los datos al servidor o almacenarlos localmente.
-
-            // Limpiar los campos del formulario después de guardar la tarjeta
-            document.getElementById("card-number").value = "";
-            document.getElementById("expiration-date").value = "";
-            document.getElementById("security-code").value = "";
-
-            // Crear un nuevo elemento de lista para mostrar la tarjeta de crédito agregada
-            var cardList = document.getElementById("card-list");
-            var newCard = document.createElement("li");
-            newCard.textContent = "Número de Tarjeta: " + cardNumber;
-            cardList.appendChild(newCard);
-
-            // Ocultar el formulario después de guardar la tarjeta
-            var cardForm = document.getElementById("card-form");
-            cardForm.style.display = "none";
-        }
-    </script>
+    <script src="./assets/scripts/registration.js"></script>
+    <script src="./assets/scripts/suscription.js"></script>
 </body>
 </html>
 
