@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/Logo.svg" type="image/x-icon">
+    <title>LlamaPay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/styles/products.css">
+</head>
+
+<body>
+    <header id="navbar">
+        <a href="#">
+            <img class="logo" src="./assets/images/Logo2.svg" alt="LlamaPay_logo">
+        </a>
+        <nav id="navigation-bar">
+            <ul class="nav">
+                <li class="navul-element dropdown">
+                    <a href="#presentacion">Ahorros</a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="./savings/gastos.html">
+                                Gastos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./savings/objectives.html">
+                                Objetivo de Ahorro
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navul-element">
+                    <a href="./reminders.html">Recordatorios</a>
+                </li>
+                <li class="navul-element">
+                    <a href="./tips.html">Consejos</a>
+                </li>
+                <li class="navul-element">
+                    <a class="activated" href="./products.html">Primera Necesidad</a>
+                </li>
+                <li class="navul-element">
+                    <a class="suscribe" href="#">Suscríbete</a>
+                </li>
+            </ul>
+            <ul class="perfil">
+                <li>
+                    <a href="./profile.html">
+                        <img src="./assets/images/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <input type="checkbox" id="check-dropdown-menu">
+        <label class="options-responsive" id="menu" for="check-dropdown-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        
+        <ul class="dropdown-menu" id="dropdown-menu">
+            <li class="navul-element">
+                <a href="./savings/gastos.html">Gastos</a>
+            </li>
+            <li class="navul-element">
+                <a href="./savings/objectives.html">Objetivo de Ahorro</a>
+            </li>
+            <li class="navul-element">
+                <a href="./reminders.html">Recordatorios</a>
+            </li>
+            <li class="navul-element">
+                <a href="./tips.html">Consejos</a>
+            </li>
+            <li class="navul-element">
+                <a class="activated" href="./products.html">Primera Necesidad</a>
+            </li>
+            <li class="navul-element">
+                <a class="suscribe" href="#">Suscríbete</a>
+            </li>
+            <li class="navul-element">
+                <a href="./profile.html">Perfil</a>
+            </li>
+        </ul>         
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="container-1">
+                <form class="Form">
+                    <div class="input-container">
+                        <h3 class="subtitle-input">Buscar</h3>
+                        <div class="search">
+                            <input type="text" id="nombre-input" placeholder="Ingrese el nombre del producto" onblur="">
+                            <i id="boton" class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+            <div class= "container-2">
+                <p class="info">Información actualizada hace 20 min</p>
+            </div>
+
+            <div class= "container-3">
+                <nav class="first-row">
+                    <ul class="options">
+                        <li>
+                            <div class="product">
+                                <img class ="png" src="./assets/images/leche.png" alt="leche">
+                                <h3 class="name">Leche</h3>
+                                <div class="array-price">
+                                    <p class="price">S/ 2.40</p>
+                                    <p class="priceOld"> <del>S/ 3.00</del></p>
+                                </div>
+                                <p class="discount">20% Off</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product">
+                                <img class ="png" src="./assets/images/huevo.png" alt="leche">
+                                <h3 class="name">Huevos</h3>
+                                <div class="array-price">
+                                    <p class="price">S/ 9.75</p>
+                                    <p class="priceOld"> <del>S/ 11.75</del></p>
+                                </div>
+                                <p class="discount">17% Off</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product">
+                                <img class ="png" src="./assets/images/aceite.png" alt="leche">
+                                <h3 class="name">Aceite</h3>
+                                <div class="array-price">
+                                    <p class="price">S/ 10.90</p>
+                                    <p class="priceOld"> <del>S/ 12.90</del></p>
+                                </div>
+                                <p class="discount">15% Off</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product">
+                                <img class ="png" src="./assets/images/queso.png" alt="leche">
+                                <h3 class="name">Queso</h3>
+                                <div class="array-price">
+                                    <p class="price">S/ 37.90</p>
+                                    <p class="priceOld"> <del>S/ 39.90</del></p>
+                                </div>
+                                <p class="discount">5% Off</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <nav class="second-row">
+                    <ul class="options">
+                        <li>
+                            <div class="product">
+                                <img class ="png" src="./assets/images/yogurt.png" alt="leche">
+                                <h3 class="name">Yogurt</h3>
+                                <div class="array-price">
+                                    <p class="price">S/ 7.40</p>
+                                    <p class="priceOld"> <del>S/ 9.90</del></p>
+                                </div>
+                                <p class="discount">25% Off</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product">
+                                <img class ="png" src="./assets/images/arroz.png" alt="leche">
+                                <h3 class="name">Arroz</h3>
+                                <div class="array-price">
+                                    <p class="price">S/ 3.90</p>
+                                    <p class="priceOld"> <del>S/ 4.90</del></p>
+                                </div>
+                                <p class="discount">20% Off</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product">
+                                <img class ="png" id ="leche" src="./assets/images/agua.png" alt="leche">
+                                <h3 class="name">Agua</h3>
+                                <div class="array-price">
+                                    <p class="price">S/ 2.40</p>
+                                    <p class="priceOld"> <del>S/ 2.90</del></p>
+                                </div>
+                                <p class="discount">17% Off</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product">
+                                <img class ="png" src="./assets/images/jamon.png" alt="leche">
+                                <h3 class="name">Jámon</h3>
+                                <div class="array-price">
+                                    <p class="price">S/ 12.50</p>
+                                    <p class="priceOld"> <del>S/ 14.90</del></p>
+                                </div>
+                                <p class="discount">16% Off</p>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>    
+        </div>
+    </main>
+    <script src="./assets/scripts/navbar.js"></script>
+</body>
+
+</html>

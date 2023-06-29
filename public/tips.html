@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/Logo.svg" type="image/x-icon">
+    <title>Recordatorios</title>
+    <link rel="stylesheet" href="./assets/styles/tips.css">
+    <title>Consejos</title>
+</head>
+<body>
+    
+    <header id="navbar">
+        <a href="#">
+            <img class="logo" src="./assets/images/Logo2.svg" alt="LlamaPay_logo">
+        </a>
+        <nav id="navigation-bar">
+            <ul class="nav">
+                <li class="navul-element dropdown">
+                    <a href="#presentacion">Ahorros</a>
+                    <ul class="dropdown-content">
+                        <li>
+                            <a href="./savings/gastos.html">
+                                Gastos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./savings/objectives.html">
+                                Objetivo de Ahorro
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="navul-element">
+                    <a href="./reminders.html">Recordatorios</a>
+                </li>
+                <li class="navul-element">
+                    <a class="activated" href="./tips.html">Consejos</a>
+                </li>
+                <li class="navul-element">
+                    <a href="./products.html">Primera Necesidad</a>
+                </li>
+                <li class="navul-element">
+                    <a class="suscribe" href="#">Suscríbete</a>
+                </li>
+            </ul>
+            <ul class="perfil">
+                <li>
+                    <a href="./profile.html">
+                        <img src="./assets/images/perfil.png" width="40" height="40" id="profile-img" alt="foto de perfil">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <input type="checkbox" id="check-dropdown-menu">
+        <label class="options-responsive" id="menu" for="check-dropdown-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        
+        <ul class="dropdown-menu" id="dropdown-menu">
+            <li class="navul-element">
+                <a href="./savings/gastos.html">Gastos</a>
+            </li>
+            <li class="navul-element">
+                <a href="./savings/objectives.html">Objetivo de Ahorro</a>
+            </li>
+            <li class="navul-element">
+                <a href="./reminders.html">Recordatorios</a>
+            </li>
+            <li class="navul-element">
+                <a class="activated" href="./tips.html">Consejos</a>
+            </li>
+            <li class="navul-element">
+                <a href="./products.html">Primera Necesidad</a>
+            </li>
+            <li class="navul-element">
+                <a class="suscribe" href="#">Suscríbete</a>
+            </li>
+            <li class="navul-element">
+                <a class="perfil" href="./profile.html">Perfil</a>
+            </li>
+        </ul>         
+    </header>
+
+    <main>
+        <div id="chat-container">
+            <h1>¿Qué tipo de consejo desea el día de hoy?</h1>
+
+            <div class="llamaBot-speech-container">
+                <img src="./assets/images/LlamaBot.svg" alt="LlamaBot">
+                <div class="bubble-text-bot">
+                    <p>¡Hola! Soy LlamaBot, una IA y estoy aquí para darte algunos consejos.</p>
+                </div>
+            </div>
+
+            <div id="option-container">
+                <p>Elige:</p>
+                <ul id="tip-list">
+                    <li>
+                        <button class="tip-button" onclick="CreateUserResponse(this.textContent)">Consejo sobre como <strong>mejorar</strong></button>
+                    </li>
+                    <li>
+                        <button class="tip-button" onclick="CreateUserResponse(this.textContent)">Consejo sobre <strong>inversiones</strong></button>
+                    </li>
+                    <li>
+                        <button class="tip-button" onclick="CreateUserResponse(this.textContent)"><strong>Categorizar</strong> mis gastos</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="./assets/scripts/tips/tips.js"></script>
+    <script src="./assets/scripts/navbar.js"></script>
+
+</body>
+</html>

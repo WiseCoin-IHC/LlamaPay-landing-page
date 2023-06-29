@@ -20,29 +20,28 @@
 .title-form h2 {
     font-size: 2em;
 }
-.reminder-form {
+.expense-form {
     width: 80%;
 }
-.invalid-input-text {
-    font-size: .7em;
-    color: red;
-    display: none;
-}
 .input-container {
+    display: flex;
+    flex-direction: column;
     margin: .9rem 0;
 }
-.container-form .subtitle-input {
+.expense-form label {
     font-weight: 400;
+    font-size: 1.6rem;
+    margin: .5rem 0;
 }
-.container-form input {
+.expense-form input, select {
     width: 100%;
     border-radius: 4px;
     border: solid  1px var(--light_green);
     padding: 10px .8rem;
-    margin-top: .2rem;
 }
 .btns-form {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
 }
 .btn-form {
@@ -73,7 +72,6 @@
     display: none;
     color: red;
 }
-
 @media screen and (max-width: 550px) {
     .btns-form {
         flex-direction: column;

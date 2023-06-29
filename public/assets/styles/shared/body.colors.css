@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style-type: none;
+}
+
 body {
     width: 100%;
     min-height: 100vh;
@@ -19,4 +35,6 @@ body {
     --white: #fff;
     --gray: #8B8B8B;
     --red-forbidden: #f12323;
+    --jet-black: #252525;
+    --pastel-green: #73AE8A;
 }
