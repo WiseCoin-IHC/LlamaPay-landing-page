@@ -16,7 +16,21 @@ function addData(dTitle, dAmount, dDate, dPlace, dDetails) {
 
 }
 
+function deleteReminder(deleteDivId) {
+
+    let deleteDiv = document.getElementById(deleteDivId);
+    const reminderTitle = deleteDiv.parentElement.parentElement.firstElementChild.innerText
+
+    if (confirm(`¿Seguro que desea eliminar el recordatorio "${reminderTitle}"?`)){
+        const reminderCard = deleteDiv.parentElement.parentElement.parentElement.parentElement;
+        const reminderList = deleteDiv.parentElement.parentElement.parentElement.parentElement.parentElement;
+        reminderList.removeChild(reminderCard);
+    }
+        
+}
+
 function createTitleAndOptions() {
+    let currentReminderContainers = document.getElementsByClassName('reminder-container').length
     let titleReminder = document.createElement('h3');
     titleReminder.className = 'title-reminder';
     titleReminder.innerText = 'Recordatorio: '+title;
@@ -24,19 +38,26 @@ function createTitleAndOptions() {
     let circleDiv = document.createElement('div');
     circleDiv.className='circle';
 
-    let optionsDiv = document.createElement('div')
-    optionsDiv.className='options'
+    let deleteDiv = document.createElement('div');
+    deleteDiv.id = `remin-${currentReminderContainers+1}`
+    deleteDiv.addEventListener("click", () => deleteReminder(`remin-${currentReminderContainers+1}`));
+    let deleteIcon = document.createElement('img');
+    deleteIcon.className = 'icon-option';
+    deleteIcon.src = './assets/images/trashcan.png';
+    deleteDiv.appendChild(deleteIcon);
 
-    optionsDiv.appendChild(document.createElement('span'))
-    optionsDiv.appendChild(document.createElement('span'))
-    optionsDiv.appendChild(document.createElement('span'))
-
+    let editDiv = document.createElement('div');
+    let editIcon = document.createElement('img');
+    editIcon.className = 'icon-option';
+    editIcon.src = './assets/images/pencil.png';
+    editDiv.appendChild(editIcon);
 
     let optionsSection = document.createElement('div');
     optionsSection.className='options-section';
 
     optionsSection.appendChild(circleDiv)
-    optionsSection.appendChild(optionsDiv)
+    optionsSection.appendChild(deleteDiv)
+    optionsSection.appendChild(editDiv)
 
     let titleAndOptions = document.createElement('div');
     titleAndOptions.className = 'title-and-options'
@@ -108,7 +129,6 @@ function createReminder() {
 }
 
 function addReminder() {
-    
     let liElement = document.createElement('li')
     liElement.className='reminders-element-list'
     
