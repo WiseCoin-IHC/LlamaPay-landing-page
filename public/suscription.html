@@ -69,7 +69,7 @@
                 <a href="./savings/objectives.html">Objetivo de Ahorro</a>
             </li>
             <li class="navul-element">
-                <a href="#">Recordatorios</a>
+                <a href="./reminders.html">Recordatorios</a>
             </li>
             <li class="navul-element">
                 <a href="./tips.html">Consejos</a>
@@ -88,10 +88,7 @@
 
     <main class="main">
         <div class="main-container container">
-            <ul class="list-reminders" id="list-reminders">
-            </ul>
             <div class="pago-info">
-                <div class="background-image"><div class="blur"></div></div>
                 <form id="paymentForm" onsubmit="handleFormAndPopup(event)">
         
                     <div class="row">
@@ -140,18 +137,12 @@
                         </div>
         
                     </div>
-        
+                    <div class="input-container btns-form">
+                        <input type="submit" value="Realizar pago" class="submit-btn" onclick="validarCVV()">
+                        <input type="submit" value="Cancelar" class="cancel-btn">
+
+                    </div>
                 </form>
-        
-                <input type="submit" value="Realizar pago" class="submit-btn" onclick="validarCVV()">
-                <input type="submit" value="Cancelar" class="cancel-btn">
-                    
-                <div class="popup-pago" id="popup-pago">
-                    <img src="./assests/images/img-pago/popup-success.png" alt="">
-                    <h2>Gracias</h2>
-                    <p>Tu pago fue procesado correctamente<br>Gracias por tu compra.</p>
-                    <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
-                </div>
             </div>
         </div>
     </main>
