@@ -43,11 +43,29 @@ function mostrar(obj) {
     `
 };
 
+const acceptDeleteButton = document.getElementById('btn-accept');
+const cancelDeleteButton = document.getElementById('btn-cancel');
+const containerDelete = document.getElementById('container-delete');
+
+cancelDeleteButton.addEventListener('click', () => {containerDelete.style.top='-100%';});
+
+
+// acceptDeleteButton.addEventListener("click", eliminar(event.target.parentNode.id));
+// cancelDeleteButton.addEventListener('click', function() {containerDelete.style.top='-100%';})
+
 Objetivos.addEventListener("click", (event)=>{
     if(event.srcElement.nodeName == "IMG"){
-        eliminar(event.target.parentNode.id);
+        const containerDelete = document.getElementById('container-delete');
+        containerDelete.style.top='0';
+        
+        acceptDeleteButton.addEventListener('click', function() {
+            eliminar(event.target.parentNode.id);
+            containerDelete.style.top='-100%';
+        })
     };
 });
+
+//eliminar(event.target.parentNode.id);
 
 let eliminar = (id) => {
     let ObjEliminar = document.getElementById(id);

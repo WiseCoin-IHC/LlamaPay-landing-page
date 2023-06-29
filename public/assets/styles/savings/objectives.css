@@ -160,6 +160,59 @@ dialog .button {
     cursor: pointer;
 }
 
+.container-delete-objective {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.center-container {
+    background-color: var(--snow);
+    width: 300px;
+    height: 240px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.center-container h3 {
+    text-align: center;
+    font-size: 1.6rem;
+}
+.btns-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 14px;
+}
+.btns-form .btn-delete-form {
+    margin: 10px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    background-color: var(--asparagus);
+    cursor: pointer;
+    transition: .4s;
+}
+
+#btn-accept:hover {
+    background-color: var(--black-hover);
+}
+#btn-cancel {
+    background-color: var(--gray);
+    color: #000;
+}
+#btn-cancel:hover {
+    background-color: var(--red-forbidden);
+    color: var(--snow);
+}
+
+
 @media screen and (max-width: 660px) {
     .container {
         flex-direction: column;
